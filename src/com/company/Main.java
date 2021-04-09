@@ -19,19 +19,7 @@ public class Main {
         Manager haanh = new Manager(dataBooks);
         System.out.println("total pricer of Books = " + haanh.totalBooks(dataBooks));
         System.out.println("total language java of Book = " + haanh.countLanguage());
-        Book temp;
-        for (int i = 0; i < dataBooks.length; i++) {
-            for (int j = 0; j < dataBooks.length - i - 1; j++) {
-                if (dataBooks[j].getPrice() > dataBooks[j + 1].getPrice()) {
-                    temp = dataBooks[j];
-                    dataBooks[j] = dataBooks[j + 1];
-                    dataBooks[j + 1] = temp;
-                }
-            }
-        }
-        for (Book a : dataBooks
-        ) {
-            System.out.println(a.getName());
-        }
+        haanh.sortBooks();
+        haanh.displayNewdataBooks();
     }
 }
